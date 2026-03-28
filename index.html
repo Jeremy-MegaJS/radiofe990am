@@ -16,11 +16,19 @@
             </header>
 
             <section class="player-box">
-                <button id="play-button" class="play-button" type="button" aria-pressed="false">
-                    <span class="play-icon" id="play-icon">&gt;</span>
-                    <span id="play-label">Escuchar ahora</span>
-                </button>
+                <div class="player-controls">
+                    <button id="play-button" class="play-button" type="button" aria-pressed="false">
+                        <span class="play-icon" id="play-icon">&gt;</span>
+                        <span id="play-label">Escuchar ahora</span>
+                    </button>
+                    <button id="sync-button" class="sync-button" type="button">
+                        Presione aqu&iacute; para escuchar en vivo
+                    </button>
+                </div>
                 <p id="player-status" class="player-status">Presiona el boton para escuchar la radio.</p>
+                <p class="player-note">
+                    Puede pausar el audio si lo desea, pero el reproductor se sincronizar&aacute; autom&aacute;ticamente con la transmisi&oacute;n en vivo cada minuto.
+                </p>
             </section>
 
             <section class="logo-box" aria-label="Logo de la radio">
