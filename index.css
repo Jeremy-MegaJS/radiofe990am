@@ -69,6 +69,14 @@ body {
     background: rgba(39, 39, 39, 0.75);
 }
 
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
 .radio-logo {
     width: min(100%, 220px);
     height: auto;
@@ -125,9 +133,47 @@ body {
     font-size: 1.3rem;
 }
 
+.sync-button {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 16px 24px;
+    min-width: 250px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.sync-button:hover,
+.sync-button:focus-visible {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.4);
+    outline: none;
+}
+
+.sync-button:disabled,
+.play-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    animation: none;
+}
+
 .player-status {
     margin: 16px 0 0;
     font-size: 1rem;
+}
+
+.player-note {
+    margin: 12px auto 0;
+    max-width: 54ch;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.78);
 }
 
 @keyframes pulse {
@@ -146,6 +192,11 @@ body {
     }
 
     .play-button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .sync-button {
         width: 100%;
         min-width: 0;
     }
